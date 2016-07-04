@@ -5,7 +5,7 @@ database=${domain//./-}
 instance=$(sudo yunohost app setting $app instance)
 
 # Remove database
-	sudo -u postgres dropdb $database
+	sudo su -c "dropdb $database" postgres
 
 # If removing master instance, remove Odoo.
 	if [ "$instance" = "master" ]; then
