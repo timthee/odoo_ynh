@@ -25,7 +25,7 @@ ynh_backup "$conf_file" "$1$conf_file"
 ynh_backup "/etc/nginx/conf.d/${domain}.d/${app}.conf" "etc/nginx/conf.d/${domain}.d/${app}.conf"
 
 # Save postgresql conf
-ynh_backup "/etc/postgresql/9.4/main/pg_hba.conf" "etc/postgresql/9.4/main/pg_hba.conf"
+ynh_backup "/etc/postgresql/9.4/main/pg_hba.conf" "etc/postgresql/9.6/main/pg_hba.conf"
 
 # Copy database
 database=${domain//./-}
